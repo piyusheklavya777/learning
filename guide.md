@@ -1,1 +1,2 @@
-# This is the first commit
+# Bit Manipulation
+- Refer to the folder bit_manipulation
