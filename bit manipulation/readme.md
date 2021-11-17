@@ -27,4 +27,10 @@
 
 - Integer.toString(number,2) converts the num to binary before stringifying it.
 - sweet one liner to check if a num is a power of x :  Integer.toString(n,x).matches("^10*");
+- check if a num is a power of 2 : n & n-1 should be 0. e.g. 4: 100 & 011 = 0. 5: 101 & 100 != 0
+- check if any number can be represented as powers of 3 (or anything uptill 9)
+    - Bits of any number when represented in x-nary form can take values upto x-1. e.g.
+        - 7 with base 3 is 21 = 3^1 (2) + 3^0 (1).
+- -x = ~x + 1
+- x & -x results in a sequence where only the first (from least sig. side) high bit of x remains.
 
