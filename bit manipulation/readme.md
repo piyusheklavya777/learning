@@ -32,5 +32,5 @@
     - Bits of any number when represented in x-nary form can take values upto x-1. e.g.
         - 7 with base 3 is 21 = 3^1 (2) + 3^0 (1).
 - -x = ~x + 1
-- x & -x results in a sequence where only the first (from least sig. side) high bit of x remains.
+- x & -x results in a sequence where only the first (from least sig. side) high bit of x remains high. all else is 0.
 
