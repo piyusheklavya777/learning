@@ -1,0 +1,56 @@
+- AWS Fundamental Building blocks
+    - Regions and AZs : AZs are like data centers in a region which is a general area e.g. us-east-1 ap-southeast-1. AZs doesn't necessarily mean just 1 data centre. There might be multiple in the same locality.
+    - Each region has 2 or more AZs.
+    - Edge locations are 'networking points of presence' make sure content is delivered to user from the nearest availaible source. Consists of cloudfront, CDN (Content Delivery Network)
+    - Shared Responsibility Model :
+        - You're likely responsible for things you can do yourself like choosing db instance etc. Things you can't do like wiring in data center, aws is responsible for those
+        - encryption is a shared responsibility : i'm supposed to click encrypt, while AWS is supposed to follow through and actually encrypt the data
+    - some key services :
+        - Compute
+            - EC2
+            - Lambda
+            - Elastic beanstalk : it is a provisioning service. it auto handles all the creation of load balancers etc.
+        -  Storage
+            - S3
+            - EBS : Elastic block storage : a virtual hask disk we attach to our virtual machines
+            - EFS : Elastic File storage
+            - FSx
+        - Databases
+            - RDS
+            - DynamoDB (non relational)
+            - Redshift (data warehousing)
+        - Networking
+            - way of all these parts to comm.
+            - VPC
+            - direct connect : is a way to connect your on-premises data centers to aws
+            - Route 53 : DNS services
+            - API Gateway
+            - AWS Global Accelarator
+    - Well architected framework
+        - go through the white paper on aws well architected. TBD : night-before-exam
+        - Five pillars of well architected framework:
+            - Reliability
+            - Operational Excellence
+            - Performance Efficiency
+            - Security
+            - Cost Optimization
+    - Quiz
+        - what are 5 pillars of well architected
+            - reliability, operational excellence, performance efficiency, security, cost optimization
+        - which is not a storage solution from aws
+            - ec2
+        - which statement describes edge location
+            - A networking point of presence used for caching content
+        - which statement best describes edge location
+            - a physical location on globe with atleast 2 AZs in it.
+- IAM :
+    - Identity and Access Management is the way to granting access to AWS resources
+    - Root account is the email ID with which we signed up for AWS. It has full admin access
+    - how to secure root account :
+        - go to security credentials from user dropdown on top right.
+        - activate MFA (multi factor authentication)
+            - it can be set up with google authenticator or another one i forgot
+            - creating administrator groups and then assign it to the few people
+    - how to control user actions with policy documents
+        - 
+     

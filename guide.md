@@ -5,5 +5,5 @@
 
 # AWS Solutions Architect Assiciate
   - ACloudGuru. login with linkedin.
-  - Designing Resilient Architecture :
-    - 
+  - refer to AWS_SAA folder
+  
