@@ -52,5 +52,40 @@
             - it can be set up with google authenticator or another one i forgot
             - creating administrator groups and then assign it to the few people
     - how to control user actions with policy documents
-        - 
-     
+        - Policy documents are wriiten (read about the JSON format of it) and assigned to 
+            - Groups
+            - Users
+            - Roles
+        - good structure is to assign policy to a group and then assign admin users to the admin group
+        - there's templates of policies in aws uder IAM
+    - Users are physical people
+    - Groups are like developers, administrators, support engg etc. Users are assigned to groups.
+    - Roles are used internally by AWS parts to access other parts. Alambda may assume a specific role so it can get KMS keys for decrypting a message, when these keys are in different account.
+    - When a user is created, by default it has no permissions, (no policies or groups attached to it)
+    - To make your windows password same as AWS pssword, use IAM Federartion (uses SAML2.0). We have to establish it as a trusted password management service.
+    - IAM is not region specific. It is global.
+    - Set up password rotations
+    - HANDS ON LAB:
+    - Policy types:
+        - managed policies are created by AWS or someone with access to do so from ur org
+        - inline policies are used for on off situations. where we won't need such kind of policy for multiple groups/users.
+    - The json structure of the policies. check iamPolicy.json
+        - Version: The Version policy element specifies the language syntax rules that are to be used to process a policy. To use all of the available policy features, include the following Version element before the Statement element in all of your policies. IAM supports the following Version element values: 
+            - 2012-10-17. This is the current version of the policy language.
+            - 2008-10-17. This was an earlier version of the policy language. Newer features, such as policy variables, will not work with your policy. For example, variables such as ${aws:username} aren't recognized as variables and are instead treated as literal strings in the policy.
+        - Statement: The Statement element is the main element for a policy. This element is required. The Statement element can contain a single statement or an array of individual statements. Each individual statement block must be enclosed in curly braces { }. For multiple statements, the array must be enclosed in square brackets [ ]. 
+            - Effect: The Effect element is required and specifies whether the statement results in an allow or an explicit deny. Valid values for Effect are Allow and Deny. VVIMP: Any Deny statement will always override any and all Allow statements.
+            - Action: You specify a value using a service namespace as an action prefix (iam, ec2, sqs, sns, s3, etc.) followed by the name of the action to allow or deny. The name must match an action that is supported by the service. The prefix and the action name are case insensitive.
+            - Resource:
+            - for more info https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html
+    - Quiz:
+        - T/F : True or False? An allow statement in a policy document will override a explicit deny statement.
+            - False : This is rather the effect of explicit deny.
+        - What does the "EAR" in a policy document stand for?
+            - Effect, Action, Resource
+        - True or False? MFA tokens are required for all new users.
+            - Attaching MFA tokens for new users is not required, but it's a good idea.
+        - Why is it dangerous to use the AWS root user account?
+            - By default, the root account has every single permission.
+- S3:
+    - 
