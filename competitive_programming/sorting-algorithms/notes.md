@@ -1,0 +1,16 @@
+# Sorting algorithms
+- Selection Sort
+    - ALGO :
+        - Find the minimum element in 0 - n-1. Put it at position 0
+        - Find the minimum element in 1 - n-1. Put it at position 1
+        - Find the minimum element in 2 - n-1. Put it at position 2, and so on.
+        - COMPLEXITY ANALYSIS :
+            - TIME C: O(n^2)
+            - SPACE C: No extra space is used. Also, no call stack is used.
+- Merge Sort
+    - ALGO :
+        - Keep dividing the 
+- Quick Sort
+    - idea : an elemetn is sorted if all the elements before it are smaller equal and all elements after it are greater equal
+    - ALGO
+        -

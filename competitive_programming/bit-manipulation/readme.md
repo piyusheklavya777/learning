@@ -18,6 +18,12 @@
 
 - XOR of anything with 0 is the number itself. Think of this as the number being added to a variable with value 0.
 
+- XOR of any nuber with all 1s is the compliment of that number. It flips all bits in the number.
+
+- to find the all-bits-1 number greater than a number : int n = 1; while(n < k) n = (n << 1) | 1;
+
+- to find power of 2greater than this number : int n = 1; while(n < k) n = n << 1;
+
 - to check in an array of nums which is the only number that appears once, xor everything together, the sum of the odd times occuring numbers survive.
     - https://leetcode.com/problems/single-number/
 

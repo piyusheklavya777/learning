@@ -1,9 +1,109 @@
 
+- crio
 # Competitive coding :
-    - Bit Manipulation
-         Refer to the folder bit_manipulation
-
+  - Bit Manipulation: Refer to the folder bit_manipulation
+  - sorting algorithms : Refer to the folder bit_manipulation
+  - Concepts to learn: (TODO)
+    - KMP algorithm for string matching. (leetcode: implement strstr())
+    - TRIE
+    - Sorting
+      - counting sort
+      - merge sort
+      - radix sort
+      - bubble sort
+      - bucket sort
+      - Quick Sort & Quick Select
+      - Insertion Sort
+    - Binary search tree
+      - https://leetcode.com/problemset/all/?search=bst&page=1
+      - Insert into BST
+      - Closest value to given target in BST
+  - Questions to solve: 
+    - https://www.geeksforgeeks.org/sorting-algorithms/ questions in the link. about 80
+    - Median of two sorted arrays (of unequal length)
+    - Largest Rectangle in histogram
+    - Maximal Rectangle
+    - 545 Boundary of Binary Tree
+    - Valid Sudoku
+    - Sudoku Solver
+    - Zigzag Conversion
+    - Divide Chocolate : binary search : leetcode hard
+    - Distribute chocolate
+    - Employee Free Time
+    - Campus Bikes
+    - egg drop
+    - Basic Calculator 1 2
+    - Burst Balloons
+  - Good Questions:
+    - 2 pointers
+      - Maximum Score of a Good Subarray
+      - 2 sum, 3 sum, 3 sum closest, 3 sum smaller, 4 sum
+    - Tree
+      - right or left view of binary tree
+      - top view of binary tree
+      - boundary of binary tree
+      - Maximum Difference Between Node and Ancestor
+    - DP
+      - coin change all versions
+      - house robber all versions
+      - egg drop
+      - Burst Balloons
+      - Jump Game 1 2
+      - Best time to Buy and Sell stock i ii iii iv
+    - Sorting
+      - K closest points to the origin : Quick Select
+    - BackTracking
+      - N Queens
+      - Bipatriate matching (concept)
+      - Valid Sudoku
+      - Sudoku Solver
+    - Arrays
+      - Container With Most Water
+      - Minimum Operations to Make the Array K-Increasing
+      - Minimum Number of Operations to Make Array Continuous
+      - Trapping Rain water approach without stack
+      - merge intervals
+      - Employee Free Time
+      - max product sub array
+      - max sum circular subarray
+    - Binary Search
+      - Search in rotated sorted array
+      - first bad version, peak element, search for a range (find first and last occurence) #cbq, Find Smallest Letter Greater Than Target
+      - https://medium.com/swlh/binary-search-find-upper-and-lower-bound-3f07867d81fb all questions at the bottom of this article
+      - Split array largest sum, Ways to ship in n days, book page divide
+    - Binary search tree
+      - 
+    - Graph
+      - BFS :
+        - Rotten Oranges
+        - Map of Highest Peak
+      - 1584 Min Cost to Connect All Points (Kruskal's and Prim's)
+      - Network delay time Dijkstra's Algo
+      - Topological Sorting
+        - Course Schedule 1 and 2
+        - Parallel Courses 1, 3
+      - Bipatriate matching : 
+    - Queue / Stack / PriorityQueue
+      - Meeting Rooms 2 :pq :segmentTree
+      - Car pooling :pq
+      - Sliding window maximum (soln with pq O(n logk) and soln with deque O(n) )
+      - Course Schedule 3
+      - Trapping Rain water approach with stack
+      - Basic Calculator
+    - LinkedList
+      - LRU cache using doubly LinkedList and Map.
+      - 237 Delete Node in a Linked List : clever q
+  - Quick Checks:
+    - converting a -ve int to +ve for easier calc, beware of Integer.MIN_VALUE, absolute of which will overflow. use long.
+    - accumulating a data type, use bigger data tyoe
+    - changing / appending to strings often, use StringBuilder instead of just String
+    - Integer overflow check in int total :
+            if(Integer.MAX_VALUE / 10 < total || Integer.MAX_VALUE / 10 == total && Integer.MAX_VALUE % 10 < digit)
+    - Splitting a string by "some string" : the some string is a regex so escape if needed, e.g. : "1.001.09".split("\\.",0) will work.
 # AWS Solutions Architect Assiciate
   - ACloudGuru. login with linkedin.
   - refer to AWS_SAA folder
-  
+
+
+
+# Operating System

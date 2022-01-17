@@ -88,4 +88,28 @@
         - Why is it dangerous to use the AWS root user account?
             - By default, the root account has every single permission.
 - S3:
-    - 
+    - Object based storage.
+    - each object can be 0 byte to 5TB
+    - a bucket is a folder in the worldwide s3
+    - s3 bucket name is unique worldwide
+    - format of s3 url: https://bucket-name.s3.regionName.amazonaws.com/fileName e.g. https://test-bucket.s3.us-east-1.amazonaws.com/myphoto.jpg imp
+    - if upload was succesful, s3 returns a HTTP 200 statusCode imp
+    - It is a key value store. It can have these
+        - key : name of file
+        - value : actual file (s3 stores data as objects so we can upload any type of data music, files etc)
+        - versionID : if versioning is enabled.
+        - metadata : things like content-type, last-modified etc
+    - availaibility: upto 99.99 percent availability from 99.95 depending on tier
+    - durability: (can data be lost) built for 11 9s e.g. 99.999999999% durability (total 11, not 11 after decimal) imp.
+    - data is stored across multiple devices redundant across atleast 3 AZs. imp.
+    - Security :
+     - encryption:
+       - server-side encryption : as soon as data is uploaded, it's encrypted
+     - Access Control Lists:
+        - 
+    - storage classes(tier):
+        - standard s3 (default version)
+            - 99.99% avl and 11 9's durability
+            - replicated in >= 3AZs
+
+    - Lifecycle management
