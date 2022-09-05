@@ -1,0 +1,36 @@
+# Docker commands :
+  - docker run busybox echo hello world :
+	  - docker run breaks don into
+	  - docker create which returns the containerID
+		- docker start -a "containerID"
+			- the -a flag is used to connect the terminal with the container's IO
+	- docker ps
+		- lists all the running docker containers being run right now
+		- with -a flag it lists all the containers from past / and running right now
+	- docker kill "containerId"
+		- it will kill the container right away without giving it time to exit gracefully. issues SEGKILL command
+	- docker stop "containerId"
+		- it will ask the container to stop and give it a few seconds to do it on it's own, after which a SEGKILL command is issued
+	- docker exec -it <containerId> command
+		- it is used to run a command inside the container.
+		- e.g. redis-cli is a command that is only able to run inside a redis container. so we first need to start a redis container and then run the redis-cli command inside the container using this command
+		- it breaks down into -i and -t flag. -i attaches container's i/o to the terminal. -t formats output.
+		- the container should have support for the command
+	- docker exec -it <containerId> sh
+		- it gives shell access to the container
+		- some containers may support bash zsh too.
+	- docker run -it sh
+		- it starts the container and right away opens a shell in it
+		- ctrl+D or type 'exit' to exit this shell
+
+# Docker File
+  - FROM alpine
+	  - base image
+	- RUN apk add --update redis
+	  - The alpine base image has apache command line installed.  We use this to 
+	- cmd ["redis-server"]
+	- name the file as Dockerfile
+	- docker build .
+	  - run the command in the directory containing Docker
+	- docker build -t dockerId/projectName:version
+		- this is how to tag your build. When using the docker run command, use the command with the tag eklav/bootcamp.
